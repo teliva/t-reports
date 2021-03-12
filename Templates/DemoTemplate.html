@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+    <style>
+        td:nth-child(1) {
+            border-right: 2px solid black;
+        }
+
+        th:nth-child(1) {
+            border-right: 2px solid black;
+        }
+
+        td:nth-child(2) {
+            text-align: right;
+        }
+
+        td {
+            padding: 4px;
+            text-indent: 15px;
+        }
+
+        th {
+            text-align: left;
+            font-size: 24px;
+            font-weight: 600;
+            text-indent: 15px;
+            padding: 2px;
+        }
+
+        .pdf-header {
+            display: inline;
+            border: 1px solid pink;
+        }
+
+        .header-text {
+            color: #b0b0b0;
+            font-size: 22px;
+        }
+
+        .header-container {
+            border-bottom: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .root-container {
+            margin: 20px;
+            width: 100vh;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="root-container">
+        <div class="header-container">
+            <img src="./demo_logo.png" class="pdf-header" />
+            <div id="model-number" class="pdf-header header-text" style="margin-left:200px; width:30%;">Model #: </div>
+            <div id="date" class="pdf-header header-text" style="width:30%;">Date: </div>
+        </div>
+        <div style="height:450px; margin:4px 0 4px 0;">
+        </div>
+        <table style="width:100%; border-spacing:0; font-size:16px;">
+            <tr style="background-color:#D3D3D3">
+                <th>Config Description:</th>
+                <th>Unit Price</th>
+            </tr>
+            <tr>
+                <td>Upholstery Selection</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Full black chair</td>
+                <td>$237</td>
+            </tr>
+            <tr>
+                <td> Upholstery Selecton </td>
+                <td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
