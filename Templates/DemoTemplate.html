@@ -28,7 +28,6 @@
 
         .pdf-header {
             display: inline;
-            border: 1px solid pink;
         }
 
         .header-text {
@@ -43,39 +42,48 @@
         }
 
         .root-container {
-            margin: 20px;
+            padding: 20px;
             width: 100vh;
             height: 100vh;
         }
+
+        ;
     </style>
 </head>
-<body>
-    <div class="root-container">
-        <div class="header-container">
-            <img src="./demo_logo.png" class="pdf-header" />
-            <div id="model-number" class="pdf-header header-text" style="margin-left:200px; width:30%;">Model #: </div>
-            <div id="date" class="pdf-header header-text" style="width:30%;">Date: </div>
-        </div>
-        <div style="height:450px; margin:4px 0 4px 0;">
-        </div>
-        <table style="width:100%; border-spacing:0; font-size:16px;">
-            <tr style="background-color:#D3D3D3">
-                <th>Config Description:</th>
-                <th>Unit Price</th>
-            </tr>
-            <tr>
-                <td>Upholstery Selection</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Full black chair</td>
-                <td>$237</td>
-            </tr>
-            <tr>
-                <td> Upholstery Selecton </td>
-                <td>
-            </tr>
-        </table>
+<div class="root-container">
+    <div class="header-container">
+        <img src="./demo_logo.png" class="pdf-header"></img>
+        <div id="model-number" class="pdf-header header-text" style="margin-left:200px; width:30%;">Model #: </div>
+        <div id="date" class="pdf-header header-text" style="width:30%;">Date: </div>
     </div>
-</body>
+    <div style="height:450px; margin:4px 0 4px 0;">
+    </div>
+    <table style="width:100%; border-spacing:0; font-size:16px;">
+        <tr style="background-color:#D3D3D3">
+            <th>Config Description:</th>
+            <th>Unit Price</th>
+        </tr>
+        <tr>
+            <td>Upholstery Selection</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Full black chair</td>
+            <td>$237</td>
+        </tr>
+        <tr>
+            <td> Upholstery Selecton </td>
+            <td>
+        </tr>
+    </table>
+</div>
+   </div>
+<div id="url-container">
+
+</div>
 </html>
+
+<script>
+console.log(window.location.href);
+document.getElementById('url-container').innerHTML=window.location.href;
+</script>

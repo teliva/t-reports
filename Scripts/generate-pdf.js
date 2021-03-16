@@ -1,16 +1,13 @@
 ﻿const puppeteer = require('puppeteer');
-const fs = require('fs');
 
 (async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+    const params = process.argv.slice(2);
+    const browser = await puppeteer.launch()
+    const page = await browser.newPage()
 
-    //1 read our html page
-    let htmlContent = '';
-    const data = fs.readFile('example_template.html', 'utf8');
+    const url = __dirname + `\\example_template.html?params=${params[0]}`;
 
-    await page.setContent(data);
-    await page.pdf({ path: 'html.pdf', format: 'A4' });
-
+    await page.goto(url);
+    await page.pdf({ path: 'output.pdf', format: 'A4', printBackground: true });
     await browser.close()
 })()

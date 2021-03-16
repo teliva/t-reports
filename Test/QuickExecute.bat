@@ -1,0 +1,4 @@
+I:
+cd GeneratingPDF
+node generate-pdf.js e1VwaG9sc3RlcnkgU2VsZWN0aW9uOiAwLAlGdWxsIGJsYWNrIGNoYWlyOiAyMzcsIFVwaG9sc3RlcnkgU2VsZWN0b246IDB9
+pause 
