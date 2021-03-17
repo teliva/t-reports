@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.NodeServices;
 
 namespace t_reports.Controllers
 {
@@ -17,6 +18,7 @@ namespace t_reports.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly INodeServices _nodeServices;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
