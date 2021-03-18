@@ -84,6 +84,26 @@
 </html>
 
 <script>
-console.log(window.location.href);
-document.getElementById('url-container').innerHTML=window.location.href;
+    let arParams = window.location.search.slice(1).split('&');
+    let params = {};
+
+    arParams.map(ele => {
+        let [key, val] = ele.split('=');
+        params[key] = val;
+    });
+
+    let pdfDataSource = JSON.parse(atob(params.params));
+
+
+    //Date generated and appended to the document
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    document.getElementById('date').innerHTML = `Date: ${today}`;
+
+    //ModelNumber is appended to the document
+    document.getElementById('model-number').innerHTML = `Model #: ${pdfDataSource.modelNumber}`
+    document.getElementById('url-container').innerHTML = window.location.href;
 </script>
